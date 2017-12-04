@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "node-blink-security": "^1.2.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.12.1",
+    "mocha": "^4.0.1"
+  }
+}
