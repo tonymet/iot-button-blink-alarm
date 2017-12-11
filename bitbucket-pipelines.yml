@@ -1,11 +1,12 @@
 image: tonymet/node-build-env:6-alpine
 pipelines:
-  default:
-    - step:
-        script:
-          - cd lambda
-          - yarn --prod
-          - mkdir dist
-          - cp -R index.js node_modules dist
-          - yarn
-          - yarn run deploy-lambda
+  tags:
+    release-*:
+      - step:
+          script:
+            - cd lambda
+            - yarn --prod
+            - mkdir dist
+            - cp -R index.js node_modules dist
+            - yarn
+            - yarn run deploy-lambda
